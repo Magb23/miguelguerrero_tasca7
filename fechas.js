@@ -34,7 +34,13 @@ function calcularanyo(b){
      
 }
 
-function calcularanyobisiesto(c){
+function calcularanyobisiesto(b){
+    
+    if((((b%100)!=0)&&((b%4)==0))||((b%400)==0)){
+        return "El año es bisiesto";
+    }
+    
+
 
 }
 
