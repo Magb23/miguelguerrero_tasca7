@@ -1,4 +1,4 @@
-function calcularsiglo(a){
+function calcularsiglo(a){//a =anyo
 
     if (a>=1700 && a<=1799) {
         return 5;
@@ -34,7 +34,7 @@ function calcularanyo(b){
      
 }
 
-function calcularanyobisiesto(b){
+function calcularanyobisiesto(c){
     
     if((((b%100)!=0)&&((b%4)==0))||((b%400)==0)){
         return "El año es bisiesto";
@@ -97,6 +97,40 @@ function calcularmes(d){
 
 }
 
-function calculardia(e){
+function dia(e){
+    return(e);//el dia introducido
+}
 
+function calculardia(h){
+    var a = calcularsiglo(a);
+    var b = calcularanyo(b);
+    var c = calcularanyobisiesto(c);
+    var d = calcularmes(d);
+    var e = dia(e);
+
+    var y = anyo + b + c + d + e;//Tomamos todos los coeficientes calculados y los sumamos
+    var r = y - 7;//después calculamos el resto módulo 7 del número que obtenemos (restamos 7 a y)
+    return(r); 
+
+    if (r==1){
+        return lunes;
+    }
+    else if (r==2){
+        return martes;
+    }
+    else if (r==3){
+        return miercoles;
+    }
+    else if (r==4){
+        return jueves;
+    }
+    else if (r==5){
+        return viernes;
+    }
+    else if (r==6){
+        return sabado;
+    }
+    else if (r==0){
+        return domingo;
+    }
 }
