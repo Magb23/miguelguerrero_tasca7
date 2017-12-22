@@ -1,31 +1,31 @@
-function calcularsiglo(anyo){//a =anyo
+function calcularsiglo(anyo){
 
     if (anyo>=1700 && anyo<=1799) {
         return 5;
     }
-    if (anyo>=1800 && anyo<=1899) {
+    else if (anyo>=1800 && anyo<=1899) {
         return 3;
     }
-    if (anyo>=1900 && anyo<=1999) {
+    else if (anyo>=1900 && anyo<=1999) {
         return 1;
     }
-    if (anyo>=2000 && anyo<=2099) {
+    else if (anyo>=2000 && anyo<=2099) {
         return 0;
     }
-    if (anyo>=2100 && anyo<=2199) {
-        return -1;
+    else if (anyo>=2100 && anyo<=2199) {
+        return -2;
     }
-    if (anyo>=2200 && anyo<=2299) {
+    else if (anyo>=2200 && anyo<=2299) {
         return -4;
     }
     
 }
 
-function calcularanyo(mes){
+function calcularanyo(anyo){
 
    // var b = Math.trunc(parseInt(b.toString().substr(-2))/4);
     //return b;
-    var f = parseInt(mes.toString().substr(-2));
+    var f = parseInt(anyo.toString().substr(-2));
     var z = f/4;
     var w = Math.trunc(z);
     var g = f+w;
@@ -39,7 +39,7 @@ function calcularanyobisiesto(anyo){
     if(anyo.toString().substr(-1)=="2" || anyo.toString().substr(-1)== "4" && mes =="enero" || mes == "febrero"){
         return -1;
     }
-    else if(anyo.toString().substr(-1)=="2" || anyo.toString().substr(-1) == "4" && mes != "enero" || mes !="febrero"){
+    else {
         return 0;
     }
     
@@ -111,7 +111,7 @@ function calculardia(anyo,mes,dia){
     var e = parseInt(dia);
 
     var y = a + b + c + d + e;//Tomamos todos los coeficientes calculados y los sumamos
-    var r = y - 7;//después calculamos el resto módulo 7 del número que obtenemos (restamos 7 a y)
+    var r = y % 7;//después calculamos el resto módulo 7 del número que obtenemos (restamos 7 a y)
 
 
     console.log(a);
@@ -120,8 +120,7 @@ function calculardia(anyo,mes,dia){
     console.log(d);
     console.log(e);
 
-    return(r); 
-
+   
     if (r==1){
         return "lunes";
     }
