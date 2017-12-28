@@ -11,14 +11,14 @@
 
 <body>
     <script>
+        
         var anyo = prompt("Introduce el año: ");
         var mes = prompt("Introduce el mes: ");
         var dia = prompt("Introduce el día: ");
-        //var resultado = calculardia(resultado)
-         
-
-        document.write("El día "+dia+ " de " +mes+ " de " +anyo+ " fue: "+ calculardia);
-    
+        var resultado = calculardia(anyo, mes, dia);        
+        
+        document.write("El día "+dia+ " de " +mes+ " de " +anyo+ " fue: "+ resultado);
+        
     </script>
     
 </body>
