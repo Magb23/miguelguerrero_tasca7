@@ -1,5 +1,4 @@
-function calcularsiglo(anyo){
-    
+function calcularsiglo(anyo){    
     if (anyo>=1700 && anyo<=1799) {
         return 5;
     }
@@ -17,24 +16,20 @@ function calcularsiglo(anyo){
     }
     else if (anyo>=2200 && anyo<=2299) {
         return -4;
-    }
-    
+    }    
 }
 
-function calcularanyo(anyo){
-    
+function calcularanyo(anyo){    
     /* var b = Math.trunc(parseInt(b.toString().substr(-2))/4);
     return b;*/
     var f = parseInt(anyo.toString().substr(-2));
     var z = f/4;
     var w = Math.trunc(z);
     var g = f+w;
-    return g;
-    
+    return g;    
 }
 
-function calcularanyobisiesto(anyo){
-    
+function calcularanyobisiesto(anyo){    
     if((anyo%4==0 || anyo%100!==0) && anyo%400==0){
         if(mes=="enero" || mes=="febrero"){
             return -1;
@@ -48,8 +43,7 @@ pero por algún motivo me detectaba todos los meses como bisiestos y me aplicaba
 el algoritmo final "calculardia" me devolvía un día menos de lo que tocaba.
 Esto ha sido subsanado con otro IF dentro del primero para los meses de enero y febrero*/
 
-function calcularmes(mes){
-    
+function calcularmes(mes){    
     if (mes=="enero") {
         return 6;
     }
@@ -96,16 +90,10 @@ function calcularmes(mes){
     
     if (mes=="diciembre") {
         return 4;
-    }
-    
+    }    
 }
 
-/*function dia(dia){
-    return(dia);//el dia introducido
-}*/
-
-function calculardia(anyo,mes,dia){
-    
+function calculardia(anyo,mes,dia){    
     var a = calcularsiglo(anyo);
     var b = calcularanyo(anyo);
     var c = calcularanyobisiesto(anyo);
@@ -124,24 +112,24 @@ function calculardia(anyo,mes,dia){
     He utilizado estos "console.log" para poder ver en qué parte del código me fallaba la ejecución*/ 
     
     if (r==1){
-        return "lunes";
+        return "Lunes";
     }
     else if (r==2){
-        return "martes";
+        return "Martes";
     }
     else if (r==3){
-        return "miercoles";
+        return "Miercoles";
     }
     else if (r==4){
-        return "jueves";
+        return "Jueves";
     }
     else if (r==5){
-        return "viernes";
+        return "Viernes";
     }
     else if (r==6){
-        return "sabado";
+        return "Sabado";
     }
     else if (r==0){
-        return "domingo";
+        return "Domingo";
     }
 }
