@@ -91,7 +91,7 @@ function calcularmes(mes){
     if (mes=="diciembre") {
         return 4;
     }    
-}
+}//Con esta funcion al introducir el mes deseado obtendremos un valor, el cual sera utilizado en el logaritmo final calculardia
 
 function calculardia(anyo,mes,dia){    
     var a = calcularsiglo(anyo);
