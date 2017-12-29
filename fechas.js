@@ -18,7 +18,7 @@ function calcularsiglo(anyo){
     else if (anyo>=2200 && anyo<=2299) {
         return -4;
     }
-        
+    
 }
 
 function calcularanyo(anyo){
@@ -44,9 +44,9 @@ function calcularanyobisiesto(anyo){
         return 0;
     }  
 } /*Para la función del año bisiesto he intentado hacer una única línea de código para el IF,
- pero por algún motivo me detectaba todos los meses como bisiestos y me aplicaba -1, por lo que al ejecutar
- el algoritmo final "calculardia" me devolvía un día menos de lo que tocaba.
- Esto ha sido subsanado con otro IF dentro del primero para los meses de enero y febrero*/
+pero por algún motivo me detectaba todos los meses como bisiestos y me aplicaba -1, por lo que al ejecutar
+el algoritmo final "calculardia" me devolvía un día menos de lo que tocaba.
+Esto ha sido subsanado con otro IF dentro del primero para los meses de enero y febrero*/
 
 function calcularmes(mes){
     
@@ -101,7 +101,7 @@ function calcularmes(mes){
 }
 
 /*function dia(dia){
-return(dia);//el dia introducido
+    return(dia);//el dia introducido
 }*/
 
 function calculardia(anyo,mes,dia){

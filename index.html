@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cálculo del día de la semana</title>
-    <link rel="stylesheet" type="fechas/css" href="fechas.css">
+    <link rel="stylesheet" type="text/css" href="fechas.css">
     <script src="fechas.js"></script>
 </head>
 
 <body>
+    <h2>
+    <strong>¿Qué día de la semana fue?</strong>
+    </h2><hr><br>
     <script>
         
         var anyo = prompt("Introduce el año: ");
@@ -17,9 +20,11 @@
         var dia = prompt("Introduce el día: ");
         var resultado = calculardia(anyo, mes, dia);        
         
-        document.write("El día "+dia+ " de " +mes+ " de " +anyo+ " fue: "+ resultado);
+        document.write("El día "+dia+ " de " +mes+ " de " +anyo+ " fue: <br><br>"+ resultado);        
         
-    </script>
-    
+    </script><br><br><hr>
+
+    <br><button type="button"><a href="index.html">Introduce otra fecha</a></button> <br>
+
 </body>
 </html>
